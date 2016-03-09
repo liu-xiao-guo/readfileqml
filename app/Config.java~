@@ -1,0 +1,74 @@
+package cn.easytaxi.taxi.jiujiu.config;
+
+import java.util.Date;
+
+import cn.easytaxi.taxi.jiujiu.common.DateAdapter;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+public class Config {
+
+	// 公网发布域名
+	// public static String SERVER_IP = "www.365taxi.com.cn";
+	// 发布公网IP
+	
+	 public static String SERVER_IP = "123.57.36.24";
+	
+	 // public static String SERVER_IP = "42.121.125.1";
+	// 内网
+//	 public static String SERVER_IP = "10.143.132.77";
+	// 测试外网
+//	public static String SERVER_IP = "42.121.118.126";
+
+	// public static String SERVER_IP = "10.143.132.186";	 
+//	public static Integer SERVER_PORT = 9899;
+	 
+	public static Integer SERVER_PORT = 8080;
+	public static final String WEB_APP = "taxi";
+
+	public static String MORE_WEB_SERVER = "http://" + SERVER_IP + ":" + SERVER_PORT + "/apps-web/";
+	// 账户查询地址
+	public static String ACCOUNT_QUERY_URL = "http://" + SERVER_IP + ":9080/api/v1/account/query";
+	// 账户充值地址
+	public static String ACCOUNT_RECHARGE_URL = "http://" + SERVER_IP + ":9080/api/v1/account/recharge";
+	// 账户支付地址
+	public static String ACCOUNT_PAY_URL = "http://" + SERVER_IP + ":9080/api/v1/account/pay";
+	// 检查信用卡是否绑定
+	public static String CHECK_CREDITCARD_STATE_URL = "http://" + SERVER_IP + ":" + SERVER_PORT + "/rentalAccount/eposAccount/creditCard/bindCheck";
+	// 信用卡银行列表
+	public static String CREDIT_CARD_BANKS_URL = "http://" + SERVER_IP + ":9080/api/v1/eposAccount/creditCard/bank";
+	// 信用卡绑定
+	public static String CREDIT_CARD_BIND_URL = "http://" + SERVER_IP + ":9080/api/v1/eposAccount/creditCard/bind";
+
+	public static final String BAIDU_KEY = "58331edac05a57efeb8954ede346ecd0";
+//	public static final String BAIDU_KEY = "YCagyYo9542r4RRtb380g4ir";
+
+	public static final String COMPANY_ID = "2";
+
+	public static int SERVER_TCP_PORT = 13512;
+
+	public final static Integer MESSAGE_ID = 0xF00001;
+
+	public final static int CODE_TIMEOUT = 10; // 验证码超时分钟数
+
+	public static boolean codeFail = false; // 验证码失效
+
+	public static Gson gson = new GsonBuilder().registerTypeHierarchyAdapter(Date.class, new DateAdapter()).create();
+
+	public static final int BOOK_ALL = 0;// 远程获取所有订单标志
+	public static final int BOOK_SERVICE = 1;// 远程获取服务中订单标志
+	public static final int BOOK_HISTORY = 2;// 远程获取历史订单标志
+
+	public static final String COMPANY_HOTLINE = "400-677-3799";
+
+	public static final String PLATFORM_NAME = "365租车平台";
+
+	public static boolean isDebug = false;
+
+	/**
+	 * 升级中
+	 */
+	public static boolean updating = false;
+
+}

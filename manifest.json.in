@@ -1,0 +1,17 @@
+{
+    "name": "@APP_ID@",
+    "description": "description of readfileqml",
+    "architecture": "@CLICK_ARCH@",
+    "title": "@APP_NAME@",
+    "hooks": {
+        "ReadFileQML": {
+            "apparmor": "ReadFileQML.apparmor",
+            "desktop":  "ReadFileQML.desktop"
+        }
+    },
+    "version": "0.1",
+    "maintainer": "XiaoGuo, Liu <xiaoguo.liu@canonical.com>",
+    "framework" : "ubuntu-sdk-14.10"
+}
+
+
